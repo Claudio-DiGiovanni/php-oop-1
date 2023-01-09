@@ -35,24 +35,10 @@
     $softAir = new Movie ('Soft Air', 1998, 'Italy', 'Claudio Masin', 1);
     $simpson = new Movie ('I Simpson, Il Film', 2007, 'USA', 'David Silverman', 2);
 
-    echo $avatar->title . ' ';
-    echo $avatar->vote;
-    echo '<br>';
-    echo $avengers->title . ' ';
-    echo $avengers->vote;
-    echo '<br>';
-    echo $vitaBella->title . ' ';
-    echo $vitaBella->vote;
-    echo '<br>';
-    echo $softAir->title . ' ';
-    echo $softAir->vote;
-    echo '<br>';
-    echo $simpson->title . ' ';
-    echo $simpson->vote;
-    echo '<br>';
+    $movie = array($avatar, $avengers, $vitaBella, $softAir, $simpson);
 
-    var_dump($avatar);
-    var_dump($avengers);
-    var_dump($vitaBella);
-    var_dump($softAir);
-    var_dump($simpson);
+    foreach ($movie as $i) {
+        echo $i->title . ' ';
+        echo $i->vote;
+        echo '<br>';
+    }
